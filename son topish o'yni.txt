@@ -1,0 +1,17 @@
+def uyin():
+    print("1 dan 10 gacha bulgan sonlarni topish uyni")
+    sonlar=list(range(1,11))
+    import random as r
+    savol=r.randint(1,11)
+    jav=(input("men uylagan sonni kiriting; "))
+    while True :
+        javob=int(jav)
+        if savol>javob : print(f'men uylagan son {javob} dan katta')
+        elif savol<javob :print(f'men uylagan son {javob} dan kichek')
+        else : print('tabriklayman javob tug\'ri') 
+        yana=input('o\'yinni davom ettirasizmi (ha\yoq) ')
+        if yana =='ha':
+            uyin()
+        elif yana=='yoq':
+            break
+print(uyin())
